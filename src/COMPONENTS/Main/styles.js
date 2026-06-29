@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import theme from "../../theme";
 
 const MainStyles = styled.main`
     width:100%;
