@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Alerta Máxima
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Landing page comercial desarrollada con React para presentar soluciones de seguridad y monitoreo. El sitio está enfocado en convertir visitas en contactos, mostrando los servicios principales, la cobertura, testimonios y una sección de cotización.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- Hero principal con propuesta de valor clara.
+- Sección de servicios con alarmas, CCTV, videoporteros y cámaras certificadas.
+- Bloques de cobertura, ubicación y testimonios.
+- Llamado a la acción para solicitar cotización.
+- Diseño con componentes reutilizables y estilos centralizados con styled-components.
 
-### `npm start`
+## Tecnologías
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 19
+- Create React App
+- styled-components
+- styled-reset
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Requisitos
 
-### `npm test`
+- Node.js 18 o superior.
+- pnpm recomendado, aunque también puedes usar npm.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instalación
 
-### `npm run build`
+```bash
+pnpm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Si prefieres npm:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Scripts disponibles
 
-### `npm run eject`
+### pnpm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Inicia la aplicación en modo desarrollo en http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### pnpm test
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ejecuta el entorno interactivo de pruebas.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### pnpm build
 
-## Learn More
+Genera la versión optimizada para producción dentro de la carpeta build.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### pnpm eject
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Expone toda la configuración de Create React App. Es una acción irreversible.
 
-### Code Splitting
+## Estructura del proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```text
+src/
+  App.js
+  index.js
+  COMPONENTS/
+    Header/
+    Main/
+    SERVICES/
+    COBERTURA/
+    UBICACION/
+    TESTIMONIOS/
+    COTIZACION/
+    FOOTER/
+  theme/
+```
 
-### Analyzing the Bundle Size
+## Flujo de la página
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+La aplicación renderiza una sola landing con navegación por secciones:
 
-### Making a Progressive Web App
+1. Encabezado con menú y CTA.
+2. Sección principal con el mensaje de la marca.
+3. Servicios ofrecidos.
+4. Cobertura geográfica.
+5. Ubicación.
+6. Testimonios.
+7. Cotización.
+8. Pie de página.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Notas
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Los assets gráficos se sirven desde public/assets/img.
+- El tema global se aplica desde src/theme usando ThemeProvider.
